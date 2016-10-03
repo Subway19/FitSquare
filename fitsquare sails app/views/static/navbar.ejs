@@ -1,0 +1,356 @@
+<style type="text/css">
+.nav-image {
+	  max-width: 210px;!important;
+    margin-top: 13px!important;
+    height: 36px;
+    text-align: left;
+}
+.login-g {
+	max-width: auto !important;
+	width: 273px;
+	height: 44px;
+	position: relative;
+	left: 60%;
+
+}
+.login-btn-a {
+	position: absolute;
+	left: 90%;
+	margin-top: 21px;
+	z-index: 9999;
+	color: white;
+	border: 2px solid white;
+	padding: 7px 21px 4px 24px;
+}
+</style>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<nav role="navigation" class="navbar-fixed">
+	<div class="nav-wrapper">
+		<a id="logo-container" href="#" class="brand-logo">
+		<img class="nav-logo responsive-img" src="../../../images/logo.png"></a>
+		<!-- <a href="#" data-activates="nav-mobile" class="button-collapse">
+			<i class="material-icons small">menu</i>
+		</a> -->
+		<!-- <div class="row">
+			<div class="col l11 offset-l1 s8">
+				<ul class="hide-on-med-and-down tabs">
+					<% if(!req.isAuthenticated() && !req.session.authenticated) { %>
+					<li class="col s12 tab" data-link="#login-modal"><a href="#login-modal" class="modal-trigger">Login</a></li>
+					<% } else { %>
+					<li class="col s12 tab" data-link="/logout"><a href="/logout">Logout</a></li>
+					<li class="col s12 tab" data-link="/dashboard"><a href="/dashboard">Dashboard</a></li>
+					<% } %>
+					<li class="col s12 tab" data-link="/contact"><a href="/contact">Contact Us</a></li>
+					<li class="col s12 tab" data-link="/#aboutus"><a href="/#aboutus">About Us</a></li>
+					<li class="col s12 tab" data-link="/#home"><a href="/#home">Home</a></li>
+				</ul>
+			</div>
+		</div> -->
+		<!-- <ul id="nav-mobile" class="side-nav">
+			<li class="col s12 tab" data-link="/#home"><a href="/#home">Home</a></li>
+			<li class="col s12 tab" data-link="/#aboutus"><a href="/#aboutus">About Us</a></li>
+			<li class="col s12 tab" data-link="/contact"><a href="/contact">Contact Us</a></li>
+			<% if(!req.isAuthenticated() && !req.session.authenticated) { %>
+			<li class="col s12 tab" data-link="#login-modal2"><a href="#login-modal2">Login</a></li>
+			<% } else { %>
+			<li class="col s12 tab" data-link="/dashboard"><a href="/dashboard">Dashboards</a></li>
+			<li class="col s12 tab" data-link="/logout"><a href="/logout">Logout</a></li>
+			<% } %>
+		</ul> -->
+	</div>
+</nav>
+
+<a  href="#login-modal" class="modal-trigger login-btn-a">
+    <span>
+      Login
+    </span>
+</a>
+
+<style type = "text/css">
+.login-btn {
+  background: #42126b;
+  color:white;
+  height: 44px;
+  width: 75%;
+  border: none;
+  font-weight: 900;
+  font-size: 16px;
+	margin-left: 18px;
+}
+.login-btn:hover {
+  background: #3d3d3d;
+  color:white;
+  height: 44px;
+  width: 75%;
+  border: none;
+  font-weight: 900;
+  font-size: 16px;
+}
+input, textarea, text {
+    color: #46343A;
+
+}
+input[type=text] {
+      font-size: 1rem;
+}
+input[type=password] {
+      font-size: 1rem;
+}
+/*.signin-img{
+  max-width: 130%!important;
+}*/
+input[type=date]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=search]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=text]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #42126b !important;
+    box-shadow: 0 1px 0 0 #26a69a;
+		padding-left: 10px;
+		width: 72%;
+}
+input[type=text]:focus{
+     border-bottom: 1px solid #42126b !important;
+     box-shadow: 0 1px 0 0 #42126b!important;
+}
+input[type=password]:focus{
+     border-bottom: 1px solid #42126b !important;
+     box-shadow: 0 1px 0 0 #42126b!important;
+}
+.fb-image {
+	margin-top: 10px;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #46343A;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #46343A;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #46343A;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #46343A;
+}
+:placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+  color:    #46343A;
+}
+.input-field input {
+	border-radius: 2px !important;
+/*color: #42126b !important;*/
+border: 1px solid #42126b !important;
+}
+input[type=date], input[type=datetime-local], input[type=email], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], textarea.materialize-textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #9e9e9e;
+    border-radius: 0;
+    outline: 0;
+    /* height: 3rem; */
+    height: 44px;
+    /* left: 41%; */
+    margin-left: 48px;
+    width: 71%;
+    font-size: 1rem;
+    /* margin: 0 0 15px; */
+    padding-left: 15px; 
+    box-shadow: none;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    transition: all .3s;
+		margin-bottom: -3px;
+}
+.login-h5 {
+	line-height: 140%!important;
+	color:#4d4d4d;
+	margin-left: 47px;
+	margin-top: -36px;
+}
+.login-modal-img {
+	 width:40px;
+	 height:40px;
+	 margin-top:1px;
+}
+.divider {
+	height:1px;
+	margin-top:15px;
+	margin-bottom:15px;
+	margin-left: 442px;
+}
+.divider-signup{
+	height:1px;
+	margin-top:1px;
+	margin-bottom:1px;
+}
+.modal-login-btn{
+	padding-top: 4px;
+	color : white;
+}
+.login-h6 {
+	color:indigo;
+	text-align:center;
+	margin-bottom:-9px
+}
+#login-modal {
+	width:60%;
+}
+.modal-header {
+	background-color:#e3e3e3;
+}
+.signup-wrap{
+	top:-500px;
+	position: absolute;
+	/*left:400px;*/
+	left :50%;
+	width: 50%;
+}
+.signup-wrap-after{
+	top:0px;
+	position: absolute;
+	left :53%;
+	width: 50%;
+	background-color: #fafafa !important;
+	-webkit-animation:slideIn 0.4s;
+}
+.signup-wrap-hide{
+	top:-500px;
+	position: absolute;
+	left:1900px;
+	background-color: #fafafa !important;
+	-webkit-animation:slideOut 0.4s;
+}
+#login-modal2{
+	overflow-x: hidden !important;
+}
+@-webkit-keyframes slideIn{
+		from{
+			left:19000px;
+		}
+		to{
+			left:53%;
+		}
+}
+@-webkit-keyframes slideOut{
+		from{
+			left:3%;
+		}
+		to{
+			left:0px;
+		}
+}
+.input-width {
+	left :53%;
+	width: 50%;
+}
+.img-modal {
+	position: absolute;
+	width: 53%;
+	height: 600px;
+}
+.input-width-signup {
+	margin-left: 35px!important;
+}
+</style>
+
+				 <!-- Login Structure -->
+				 <div id="login-modal" class="modal modal-fixed-header" style="height:500px;overflow:hidden;">
+					 <!-- <div class="modal-header">
+						 <img class="login-modal-img" src="/images/fitsquare-icon.png">
+							<h5 class="login-h5">Login to FitSquare</h5>
+					 </div> -->
+
+					 <div class="modal-image">
+						 <img src = "../../../images/gyms-cover.jpg" class="img-modal">
+					 </div>
+					 <div class="modal-content" style="margin-top:22px;">
+						 <!-- <div class="modal-close">
+								<i class="fa fa-times fa-6" style="color:black;font-size:2em;"></i>
+							</div> -->
+		           <a href="/auth/google">
+		           	<img src="/images/google-btn.png" class="login-g"></a>
+							 <br>
+		           <a href="/auth/facebook">
+		           	<img src="/images/fb-btn.png" class="login-g"></a>
+							 <div class="divider"></div>
+								 <form action="/login/authenticate" method="POST">
+									 <div class="input-field input-width">
+										 <input type="text"  name="email" id="email" placeholder="                            Email">
+									 </div>
+									 <div class="input-field input-width">
+										 <input type="password"  name="password" id="password" placeholder="                        Password">
+									 </div>
+									 <div class="input-field input-width">
+										 <p style="text-align:center"><input type="submit" class="login-btn modal-login-btn"  style="margin-left: 6px;" value="Log In"></p>
+									 </div>
+								 </form>
+							 <div class="divider"></div>
+							 <h6 class="login-h6" style="margin-left:400px;">&nbsp;&nbsp;&nbsp;&nbsp;New to FitSquare?</h6>
+							 <div class="input-field input-width">
+								 <p style="text-align:center;"><input type="submit" class="login-btn modal-login-btn " style="margin-left: 6px;" onclick="getSignup()" value="Sign Up"></p>
+							 </div>
+	         </div>
+					 <div id="signup-wrap" class="signup-wrap">
+ 					 <div class="modal-content" style="padding-top:9px;">
+						      <!-- <i class="material-icons" style="font-size:2em;color:#4d4d4d">navigation</i>Have an Account? -->
+						 	 <i class="fa fa-long-arrow-left" style="font-size:1em;color:#4d4d4d;cursor:pointer" onclick="hideSignup()"> Already have an Account?</i>
+ 						 <!-- <form action="/login/signup" method="POST"> -->
+ 							 <!-- <p style="color:#4d4d4d;text-align:center">New to FitSquare?</p> -->
+ 							 <div class="input-field">
+ 								 <input type="text" class="input-width-signup"  name="name" id="name" placeholder="                            Name">
+ 							 </div>
+							 <div class="divider-signup"></div>
+ 							 <div class="input-field">
+ 								 <input type="text" class="input-width-signup"  name="email" id="email" placeholder="                             Email">
+ 							 </div>
+							 <div class="divider-signup"></div>
+							 <div class="input-field">
+ 								 <input type="password" class="input-width-signup"  name="password" id="password" placeholder="                         Password">
+ 							 </div>
+							 <div class="divider-signup"></div>
+ 							 <div class="input-field">
+ 								 <input type="password" class="input-width-signup"  name="cpassword" id="cpassword" placeholder="                  Confirm Password">
+ 							 </div>
+							 <div class="divider-signup"></div>
+							 <div class="input-field">
+ 								 <input type="text" class="input-width-signup" name="number" id="number" placeholder="                        Mobile No.">
+							 <div class="divider-signup"></div>
+ 							 </div>
+ 							 <div class="input-field">
+ 								 <p style="text-align:center"><input type="submit" class="login-btn modal-login-btn" style="margin-left:-10px;width:76%;" value="SIGN UP" onclick="signin()"></p>
+ 							 </div>
+						 	<div class="divider"></div>
+							 <h6 style="color:#4d4d4d">By clicking Sign Up, you agree to FitSquare's <a href="/terms"><span class="color-purple">Terms of Use</a></span> and <a href="/privacy"> <span class="color-purple">Privacy Policy.</a></span></h6>
+ 						 <!-- </form> -->
+ 	         </div>
+				 </div>
+ 			 </div>
+
+
+						<script type="text/javascript">
+							function getSignup(){
+								document.getElementById('signup-wrap').className = "signup-wrap-after";
+							}
+							function hideSignup(){
+								document.getElementById('signup-wrap').className = "signup-wrap-hide";
+							}
+							function signin(){
+								var name = document.getElementById('name').value;
+								var email = document.getElementById('email').value;
+								var password = document.getElementById('password').value;
+								var cpassword = document.getElementById('cpassword').value;
+								var number = document.getElementById('number').value;
+								console.log(name + email + password + cpassword + number);
+								if(password == cpassword) {
+									console.log("heoo");
+								}
+							}
+						</script>

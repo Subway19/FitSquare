@@ -1,0 +1,41 @@
+footer{
+	z-index: 3;
+}
+.details-view{
+	position: fixed; z-index: 2;
+	width: 1px;
+	visibility: hidden;
+}
+
+.details-view-in-view{
+	position: fixed; z-index: 1;
+	width: auto;
+	visibility:visible;
+}
+.detail-card{
+	margin: 10px;
+	background: #fff;
+	box-shadow: 10px 10px 10px 1px #e3e3e2;
+	height: 81.5vh;
+	width: 97%;
+	overflow-y: scroll;
+	margin-left: -28px;
+}
+@media(min-width:1400px)
+{
+	.detail-card
+	{
+		height: 85vh;
+	}
+}
+@media(min-width:1900px)
+{
+	.detail-card
+	{
+		height: 89vh;
+	}
+}
+
+.close-button{
+	position:absolute; top: 0; right: 0;
+}

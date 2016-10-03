@@ -1,0 +1,154 @@
+
+  body{
+    overflow-x:hidden;
+    font-family: 'Raleway', sans-serif;
+  }
+  .top-head{
+      margin-left: -39px;
+  }
+  #map-canvas{
+    width:102%;height:380px;margin-left:-1%;
+  }
+  .contact-intro{
+    margin-top:100px;
+  }
+  .contact-form{
+  	margin-top:180px;
+  }
+  .fields{
+  	margin-top:70px !important;
+  }
+  .contact-fields{
+  }
+  .intermediate-fields{
+  	margin-top:30px !important;
+  }
+  .message-field{
+  	height:150px;
+  }
+  .message-field:focus{
+  	border-top:3px solid #f44336 !important;
+  	border-left:3px solid #f44336 !important;
+  	border-right:3px solid #f44336 !important;
+  	border-bottom:3px solid #f44336 !important;
+  }
+  .btn{
+  	border-radius:5px;
+	margin-top: 30px;
+	height: 48px;
+	width: 30%;
+	background-color: #f44336;
+  }
+  .btn:hover{
+  	border-radius:5px;
+	margin-top: 30px;
+	height: 48px;
+	width: 30%;
+	background-color:#c70d00;
+	border:1px solid #c70d00 !important;
+  }
+  .map-header{
+  	margin-top:180px;
+  }
+  h6{
+    font-size: 1.5em;
+    line-height: 35px;
+    margin-top: -72px;
+    font-style:italic;
+  }
+  input, select, textarea{
+    color: white;
+  }
+
+  textarea:focus, input:focus {
+    color: white;
+  }
+	.input-field label {
+	 color: white;
+	}
+	/* label focus color */
+	.input-field input[type=text]:focus + label {
+	 color: white;
+	}
+	/* label underline focus color */
+	.input-field input[type=text]:focus {
+	 border-bottom: 2px solid #f44336;
+	 border-top:2px solid #f44336 !important;
+  	 border-left:2px solid #f44336 !important;
+  	 border-right:2px solid #f44336 !important;
+	 box-shadow: 0 1px 0 0 #f44336;
+	}
+	/* valid color */
+	.input-field input[type=text].valid {
+	 border-bottom: 1px solid #f44336;
+	 box-shadow: 0 1px 0 0 #000;
+	}
+	/* invalid color */
+	.input-field input[type=text].invalid {
+	 border-bottom: 1px solid #000;
+	 box-shadow: 0 1px 0 0 #000;
+	}
+	/* icon prefix focus color */
+	.input-field .prefix.active {
+	 color: white;
+	}
+ @media all and (min-width: 0px) and (max-width: 708px)
+  {
+  
+  h1{
+  	font-size:14vw;
+  }
+  .btn{
+  	width:40%;
+  }
+  }
+   @media all and (min-width: 0px) and (max-width: 520px)
+  {
+  .contact-form{
+  	margin-top:20px;
+  }
+  .btn{
+  	width:70%;
+  }
+	}
+ @media all and (min-width: 0px) and (max-width: 600px)
+  {
+  	.top-head 
+  {
+  font-size: 15.2vw;
+  font-weight: 500;
+  margin-top: 25%
+  }
+  .contact-form{
+  	margin-top:40px;
+  }
+  }
+  @media all and (min-width: 600px)
+  {
+  .top-head 
+  {
+  font-size: 15.2vw;
+  font-weight: 500;
+  margin-top: 6%
+  }
+}
+@media all and (min-width: 600px) and (max-width: 992px)
+  {
+  	.top-head 
+  {
+  font-size: 15.2vw;
+  font-weight: 500;
+  margin-top: 10%
+  }
+}
+  	}
+    .gmnoprint a, .gmnoprint span, .gm-style-cc {
+    display:none;
+    }
+    .gmnoprint div {
+    background:none !important;
+    display:none;
+    }
+    .gmnoprint:last-child {
+    display: none !important;
+}

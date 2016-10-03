@@ -1,0 +1,54 @@
+<!--Web Development Service Content Begins-->
+<div class="webdev-services" ng-controller="SocialController">
+	<section class="faq mt-100">
+		<div style="row">
+			<center>
+			<h1 class="service-main-title">Social Media</h1>
+			</center>
+		</div>
+		<div class="row container">
+			<h6>
+			<center>
+			We are experts at <span class="red-text">web</span>, <span class="red-text">mobile</span> and <span class="red-text">cloud development</span>. Our engineers <span class="red-text">build comprehensive custom software</span> for enterprise clients with advanced security, scalability and complexity needs.
+			</center>
+			</h6>
+		</div>
+	</section>
+	<div class="row mt-150 white-text">
+		<div class="col l12 s12">
+			<!--Services Offerred-->
+			<div class="row">
+				<center>
+				<div class="col l6 m6 s12 service" ng-repeat="service in services">
+					<div class="row">
+						<div class="col l4 offset-l4 m4 offset-m4 s4 offset-s4">
+							<i class="medium material-icons red-text">{{service.icon}}</i>
+						</div>
+						<div class="col l12 m12 s12 service-title">
+							<center>
+							<h5 class="truncate">{{service.starttitle}}</h5>
+							</center>
+						</div>
+					</div>
+					<div class="row service-content">
+						<p class="webdev-description">{{service.description}}
+						</p>
+					</div>
+				</div>
+				</center>
+			</div>
+		</div>
+	</div>
+	<!--Get a Quote-->
+	<div class="row container">
+		<div class="col l12 s12">
+			<center>
+			<form ng-submit="submit()" name="quoteForm">
+				<button class="btn quote-container {{btnClass}}" ng-click="quoteClick()" ng-disabled="disabled">
+					<p ng-hide="showInput">{{btnMesg}}</p>
+					<input type="email" ng-show="showInput" placeholder="Enter email id" ng-model="user.email">
+				</button>
+			</form>
+			</center>
+		</div>
+	</div>

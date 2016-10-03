@@ -1,0 +1,205 @@
+<section id="third">
+
+
+<!--
+<div class="login-home-back">
+</div> -->
+<!--
+<div class="login-home-pattern">
+  <p style="text-align:center;color:white;margin-top:150px;">
+    <!-img src="/images/logo.png" style="height:50px;"><br><br-->
+    <!-- <span class="user-name element-login" style="letter-spacing:5px;font-size:25px;"></span>
+  </p>
+</div> --> -->
+
+<!-- <div class="login-home">
+
+</div> -->
+
+<!--Second for social-->
+<div class="row login-wrap">
+  <div class="col l3 m12 s12">
+    <p style="opacity:0;">Login</p>
+  </div>
+  <div class="col l6 m12 s12">
+
+    <!---Login Social------>
+
+
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+      	<meta name="google-signin-client_id" content="453747433234-gips4b7qnfe3bf9ug4sf9mr505j44r6b.apps.googleusercontent.com">
+
+
+      	<script type="text/javascript">
+      	function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+        console.log('Name: ' + profile.getName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail());
+         var id_token = googleUser.getAuthResponse().id_token;
+         console.log(id_token + "is the token");
+
+        xhttp = new XMLHttpRequest();
+     xhttp.onreadystatechange = function() {
+       if (xhttp.readyState == 4 && xhttp.status == 200) {
+         console.log("Hello there");
+       }
+     };
+     xhttp.open("POST", "/login/auth?id_token="+id_token, true);
+     xhttp.send();
+     console.log("sent");
+
+      }
+      </script>
+
+      </head>
+      <body>
+
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+      <a href="#" style="z-index:9999;" onclick="signOut();">Sign out</a>
+      <script>
+        function signOut() {
+          var auth2 = gapi.auth2.getAuthInstance();
+          auth2.signOut().then(function () {
+            console.log('User signed out.');
+          });
+        }
+      </script>
+
+
+
+
+
+
+
+
+      <script>
+      // This is called with the results from from FB.getLoginStatus().
+      function statusChangeCallback(response) {
+        console.log('statusChangeCallback');
+        console.log(response);
+        // The response object is returned with a status field that lets the
+        // app know the current login status of the person.
+        // Full docs on the response object can be found in the documentation
+        // for FB.getLoginStatus().
+        if (response.status === 'connected') {
+          // Logged into your app and Facebook.
+          testAPI();
+        } else if (response.status === 'not_authorized') {
+          // The person is logged into Facebook, but not your app.
+          document.getElementById('status').innerHTML = 'Please log ' +
+            'into this app.';
+        } else {
+          // The person is not logged into Facebook, so we're not sure if
+          // they are logged into this app or not.
+          document.getElementById('status').innerHTML = 'Please log ' +
+            'into Facebook.';
+        }
+      }
+
+      // This function is called when someone finishes with the Login
+      // Button.  See the onlogin handler attached to it in the sample
+      // code below.
+      function checkLoginState() {
+        FB.getLoginStatus(function(response) {
+          statusChangeCallback(response);
+        });
+      }
+
+      window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '520405918140970',
+        cookie     : true,  // enable cookies to allow the server to access
+                            // the session
+        xfbml      : true,  // parse social plugins on this page
+        version    : 'v2.2' // use version 2.2
+      });
+
+      // Now that we've initialized the JavaScript SDK, we call
+      // FB.getLoginStatus().  This function gets the state of the
+      // person visiting this page and can return one of three states to
+      // the callback you provide.  They can be:
+      //
+      // 1. Logged into your app ('connected')
+      // 2. Logged into Facebook, but not your app ('not_authorized')
+      // 3. Not logged into Facebook and can't tell if they are logged into
+      //    your app or not.
+      //
+      // These three cases are handled in the callback function.
+
+      FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+      });
+
+      };
+
+      // Load the SDK asynchronously
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
+      // Here we run a very simple test of the Graph API after login is
+      // successful.  See statusChangeCallback() for when this call is made.
+      function testAPI() {
+        console.log('Welcome!  Fetching your information.... ');
+        FB.api('/me', function(response) {
+          console.log('Successful login for: ' + response.name);
+          document.getElementById('status').innerHTML =
+            'Thanks for logging in, ' + response.name + '!';
+        });
+      }
+    </script>
+
+    <!--
+      Below we include the Login Button social plugin. This button uses
+      the JavaScript SDK to present a graphical Login button that triggers
+      the FB.login() function when clicked.
+    -->
+
+    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+    </fb:login-button>
+
+    <div id="status">
+    </div>
+
+    <!--Social Login-->
+
+
+  </div>
+  <div class="col l3 m12 s12">
+    <p style="opacity:0;">Login</p>
+  </div>
+</div>
+
+<!--Second for social-->
+
+<div class="row login-wrap">
+  <div class="col l3 m12 s12">
+    <p style="opacity:0;">Login</p>
+  </div>
+  <div class="col l6 m12 s12">
+    <form action="/login/authenticate" method="POST">
+      <div class="input-field col s12">
+        <input type="text"  name="email" id="email" placeholder="    Your E - Mail here *">
+      </div>
+      <div class="input-field col s12">
+        <input type="password"  name="password" id="password" placeholder="    Your Password here *">
+      </div>
+      <div class="input-field col s12">
+        <p style="text-align:center"><input type="submit" class="btn btn-submit" value="Log In"></p>
+      </div>
+      <!-- <div class="input-field col s12 ">
+       <input type="text" name="email" id="email" placeholder="    Your Message here *">
+     </div> -->
+    </form>
+  </div>
+  <div class="col l3 m12 s12">
+    <p style="opacity:0;">Login</p>
+  </div>
+</div>
+</section>

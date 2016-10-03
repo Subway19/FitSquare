@@ -1,0 +1,121 @@
+<div class="row">
+<div class="col-md-2">
+
+		<a id="logo-container" href="#" class="brand-logo">
+		<img class="nav-logo responsive-img" src="./assets/images/logo.png" height="29px" width="183px">
+		</a>
+		<!-- <a href="#" data-activates="nav-mobile" class="button-collapse">
+			<i class="material-icons small">menu</i>
+		</a> -->
+		<!-- <div class="row">
+			<div class="col l11 offset-l1 s8">
+				<ul class="hide-on-med-and-down tabs">
+					<% if(!req.isAuthenticated() && !req.session.authenticated) { %>
+					<li class="col s12 tab" data-link="#login-modal"><a href="#login-modal" class="modal-trigger">Login</a></li>
+					<% } else { %>
+					<li class="col s12 tab" data-link="/logout"><a href="/logout">Logout</a></li>
+					<li class="col s12 tab" data-link="/dashboard"><a href="/dashboard">Dashboard</a></li>
+					<% } %>
+					<li class="col s12 tab" data-link="/contact"><a href="/contact">Contact Us</a></li>
+					<li class="col s12 tab" data-link="/#aboutus"><a href="/#aboutus">About Us</a></li>
+					<li class="col s12 tab" data-link="/#home"><a href="/#home">Home</a></li>
+				</ul>
+			</div>
+		</div> -->
+		<!-- <ul id="nav-mobile" class="side-nav">
+			<li class="col s12 tab" data-link="/#home"><a href="/#home">Home</a></li>
+			<li class="col s12 tab" data-link="/#aboutus"><a href="/#aboutus">About Us</a></li>
+			<li class="col s12 tab" data-link="/contact"><a href="/contact">Contact Us</a></li>
+			<% if(!req.isAuthenticated() && !req.session.authenticated) { %>
+			<li class="col s12 tab" data-link="#login-modal2"><a href="#login-modal2">Login</a></li>
+			<% } else { %>
+			<li class="col s12 tab" data-link="/dashboard"><a href="/dashboard">Dashboards</a></li>
+			<li class="col s12 tab" data-link="/logout"><a href="/logout">Logout</a></li>
+			<% } %>
+		</ul> -->
+	
+
+
+
+</div>
+<div class="col-md-2" style="margin-left:1000px">
+		<a  href="#login-modal" class="modal-trigger login-btn-a">
+    		<span> Login</span>
+		</a>
+</div>
+</div>
+
+
+<div id="login-modal" class="modal modal-fixed-header" style="height:500px;overflow:hidden;">
+					 <!-- <div class="modal-header">
+						 <img class="login-modal-img" src="/images/fitsquare-icon.png">
+							<h5 class="login-h5">Login to FitSquare</h5>
+					 </div> -->
+
+					 <div class="modal-image">
+						 <img src = "./assets/images/gyms-cover.jpg" class="img-modal">
+					 </div>
+					 <div class="modal-content" style="margin-top:22px;">
+						 <!-- <div class="modal-close">
+								<i class="fa fa-times fa-6" style="color:black;font-size:2em;"></i>
+							</div> -->
+		           <a href="/auth/google">
+		           	<img src="/images/google-btn.png" class="login-g"></a>
+							 <br>
+		           <a href="/auth/facebook">
+		           	<img src="/images/fb-btn.png" class="login-g"></a>
+							 <div class="divider"></div>
+								 <form action="/login/authenticate" method="POST">
+									 <div class="input-field input-width">
+										 <input type="text"  name="email" id="email" placeholder="                            Email">
+									 </div>
+									 <div class="input-field input-width">
+										 <input type="password"  name="password" id="password" placeholder="                        Password">
+									 </div>
+									 <div class="input-field input-width">
+										 <p style="text-align:center"><input type="submit" class="login-btn modal-login-btn"  style="margin-left: 6px;" value="Log In"></p>
+									 </div>
+								 </form>
+							 <div class="divider"></div>
+							 <h6 class="login-h6" style="margin-left:400px;">&nbsp;&nbsp;&nbsp;&nbsp;New to FitSquare?</h6>
+							 <div class="input-field input-width">
+								 <p style="text-align:center;"><input type="submit" class="login-btn modal-login-btn " style="margin-left: 6px;" onclick="getSignup()" value="Sign Up"></p>
+							 </div>
+	         </div>
+					 <div id="signup-wrap" class="signup-wrap">
+ 					 <div class="modal-content" style="padding-top:9px;">
+						      <!-- <i class="material-icons" style="font-size:2em;color:#4d4d4d">navigation</i>Have an Account? -->
+						 	 <i class="fa fa-long-arrow-left" style="font-size:1em;color:#4d4d4d;cursor:pointer" onclick="hideSignup()"> Already have an Account?</i>
+ 						 <!-- <form action="/login/signup" method="POST"> -->
+ 							 <!-- <p style="color:#4d4d4d;text-align:center">New to FitSquare?</p> -->
+ 							 <div class="input-field">
+ 								 <input type="text" class="input-width-signup"  name="name" id="name" placeholder="                            Name">
+ 							 </div>
+							 <div class="divider-signup"></div>
+ 							 <div class="input-field">
+ 								 <input type="text" class="input-width-signup"  name="email" id="email" placeholder="                             Email">
+ 							 </div>
+							 <div class="divider-signup"></div>
+							 <div class="input-field">
+ 								 <input type="password" class="input-width-signup"  name="password" id="password" placeholder="                         Password">
+ 							 </div>
+							 <div class="divider-signup"></div>
+ 							 <div class="input-field">
+ 								 <input type="password" class="input-width-signup"  name="cpassword" id="cpassword" placeholder="                  Confirm Password">
+ 							 </div>
+							 <div class="divider-signup"></div>
+							 <div class="input-field">
+ 								 <input type="text" class="input-width-signup" name="number" id="number" placeholder="                        Mobile No.">
+							 <div class="divider-signup"></div>
+ 							 </div>
+ 							 <div class="input-field">
+ 								 <p style="text-align:center"><input type="submit" class="login-btn modal-login-btn" style="margin-left:-10px;width:76%;" value="SIGN UP" onclick="signin()"></p>
+ 							 </div>
+						 	<div class="divider"></div>
+							 
+ 						 <!-- </form> -->
+ 	         </div>
+				 </div>
+ 			 </div>
+
+

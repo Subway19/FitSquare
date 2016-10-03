@@ -1,0 +1,317 @@
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+<div class="search-result">
+
+
+<style type="text/css">
+    #section-header{
+      -vendor-animation-duration: 0.6s;
+      -vendor-animation-delay: 3s;
+    }
+    #hero-search{
+      -vendor-animation-duration: 0.6s;
+      -vendor-animation-delay: 3s;
+    }
+    h1,h2,h3,h4,h5,h6,p {
+      font-size: 1.0rem;
+    }
+</style>
+
+<script type="text/javascript">
+              $( document ).ready(function() {
+                    //set your google maps parameters
+                    var $latitude = 28.5437476,
+                        $longitude =77.2305002,
+                        $map_zoom = 15;
+
+                    //google map custom marker icon - .png fallback for IE11
+                    var is_internetExplorer11= navigator.userAgent.toLowerCase().indexOf('trident') > -1;
+                    var $marker_url = ( is_internetExplorer11 ) ? '/images/map-marker.png' : '/images/map-marker.png';
+
+                    //define the basic color of your map, plus a value for saturation and brightness
+                    var $main_color = '#2d313f',
+                        $saturation= -100,
+                        $brightness=45;
+
+                    //we define here the style of the map
+                    var style= [{"featureType":"road","stylers":[{"hue":"#5e00ff"},{"saturation":-79}]},{"featureType":"poi","stylers":[{"saturation":-78},{"hue":"#6600ff"},{"lightness":-47},{"visibility":"off"}]},{"featureType":"road.local","stylers":[{"lightness":22}]},{"featureType":"landscape","stylers":[{"hue":"#6600ff"},{"saturation":-11}]},{},{},{"featureType":"water","stylers":[{"saturation":-65},{"hue":"#1900ff"},{"lightness":8}]},{"featureType":"road.local","stylers":[{"weight":1.3},{"lightness":30}]},{"featureType":"transit","stylers":[{"visibility":"simplified"},{"hue":"#5e00ff"},{"saturation":-16}]},{"featureType":"transit.line","stylers":[{"saturation":-72}]},{}];
+
+                    //set google map options
+                    var map_options = {
+                        center: new google.maps.LatLng($latitude, $longitude),
+                        zoom: $map_zoom,
+                        panControl: false,
+                        zoomControl: false,
+                        mapTypeControl: false,
+                        streetViewControl: false,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP,
+                        scrollwheel: false,
+                        styles: style,
+                    }
+                    //inizialize the map
+                    var map = new google.maps.Map(document.getElementById('google-container'), map_options);
+                    //add a custom marker to the map
+                    var marker = new google.maps.Marker({
+                        position: new google.maps.LatLng($latitude, $longitude),
+                        map: map,
+                        visible: true,
+                        icon: $marker_url,
+                    });
+
+                    //add custom buttons for the zoom-in/zoom-out on the map
+                    function CustomZoomControl(controlDiv, map) {
+                        //grap the zoom elements from the DOM and insert them in the map
+                        var controlUIzoomIn= document.getElementById('cd-zoom-in'),
+                            controlUIzoomOut= document.getElementById('cd-zoom-out');
+                        controlDiv.appendChild(controlUIzoomIn);
+                        controlDiv.appendChild(controlUIzoomOut);
+
+                        // Setup the click event listeners and zoom-in or out according to the clicked element
+                        google.maps.event.addDomListener(controlUIzoomIn, 'click', function() {
+                            map.setZoom(map.getZoom()+1)
+                        });
+                        google.maps.event.addDomListener(controlUIzoomOut, 'click', function() {
+                            map.setZoom(map.getZoom()-1)
+                        });
+                    }
+
+                    var zoomControlDiv = document.createElement('div');
+                    var zoomControl = new CustomZoomControl(zoomControlDiv, map);
+
+                    //insert the zoom div on the top left of the map
+                    map.controls[google.maps.ControlPosition.LEFT_TOP].push(zoomControlDiv);
+                });
+
+
+            </script>
+
+<section class="pbot">
+  <div class="container">
+  <div class="row">
+      <div class="col s12 l8 m12 margin-top">
+        <div class="sample-card-2">
+            <div class="gym-cover-photo">
+                <img src="/images/gyms-cover.jpg">
+                <h2 class="gym-title-cover"><%= gym.gym_name%></h2>
+                <div class="gym-days">
+                    <ul class="gym-days-tabs">
+                        <li class="active">M</li>
+                        <li class="active">T</li>
+                        <li class="active">W</li>
+                        <li class="active">T</li>
+                        <li class="active">F</li>
+                        <li class="active">S</li>
+                        <li>S</li>
+                    </ul>
+                </div>
+                <button class="download-button-3 bookmark-tab"><i class="fa fa-1x fa-bookmark-o"></i>&nbsp;Bookmark</button>
+
+            </div>
+            <div class="gym-details">
+                <ul class="fa-ul pli40 li-1">
+                  <li><i class="fa-li fa fa-map-marker fa-2x color-purple"></i><h5><%= gym.locality%></h5><p class="details"><%= gym.address%></p></li>
+                  <li><i class="fa-li fa fa-clock-o fa-2x color-purple"></i><h5>Opening Hours</h5><p class="details">11 AM to 11:30 PM</p></li>
+                  <li><i class="fa-li fa fa-inr fa-2x color-purple"></i><h5>Monthly Budget</h5><p class="details">Rs. 2400</p></li>
+                </ul>
+                <div class="rating-gym-big">
+                    4.2
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+        <div class="sample-card-2 pl30">
+
+            <div class="row pt15">
+            <div class="col s12 l6 m6">
+                <div class="col s12 l12 m12 highlights">
+                    <div class="row">
+                        <h5>Offerings</h5>
+                    <ul class="fa-ul pli40 col s6 m6 l6">
+                      <li><i class="fa-li fa fa-check-circle-o fa-1x color-purple"></i>Weight Lose</li>
+                      <li><i class="fa-li fa fa-check-circle-o fa-1x color-purple"></i>Yoga</li>
+                      <li><i class="fa-li fa fa-check-circle-o fa-1x color-purple"></i>Weight Lose</li>
+                      <li class="inactive"><i class="fa-li fa fa-times-circle-o fa-1x "></i>Yoga</li>
+                      <li class="inactive"><i class="fa-li fa fa-times-circle-o fa-1x "></i>Yoga</li>
+                      <li><i class="fa-li fa fa-times-circle-o fa-1x "></i>Personal Trainer</li>
+                      <li><i class="fa-li fa fa-check-circle-o fa-1x "></i>Weight Lose</li>
+                      <li><i class="fa-li fa fa-check-circle-o fa-1x "></i>Weight Lose</li>
+                </ul>
+                <ul class="fa-ul pli40 col s6 m6 l6">
+                      <li><i class="fa-li fa fa-check-circle-o fa-1x color-purple"></i>Weight Lose</li>
+                      <li><i class="fa-li fa fa-check-circle-o fa-1x color-purple"></i>Yoga</li>
+                      <li class="inactive"><i class="fa-li fa fa-times-circle-o fa-1x "></i>Personal Trainer</li>
+                      <li><i class="fa-li fa fa-check-circle-o fa-1x color-purple"></i>Weight Lose</li>
+                      <li><i class="fa-li fa fa-check-circle-o fa-1x color-purple"></i>Weight Lose</li>
+                      <li class="inactive"><i class="fa-li fa fa-times-circle-o fa-1x "></i>Yoga</li>
+                    </ul>
+                    </div>
+
+                </div>
+                 <div class="col s12 l12 m12 facilities">
+                    <div class="row">
+                        <h5>Facilities</h5>
+                        <ul class="fa-ul pli40 col s6 m6 l6">
+                      <li><i class="fa-li fa fa-check-circle-o fa-1x color-purple"></i>Weight Lose</li>
+                      <li><i class="fa-li fa fa-check-circle-o fa-1x color-purple"></i>Yoga</li>
+                      <li class="inactive"><i class="fa-li fa fa-times-circle-o fa-1x "></i>Personal Trainer</li>
+                      <li><i class="fa-li fa fa-check-circle-o fa-1x color-purple"></i>Weight Lose</li>
+                      <li><i class="fa-li fa fa-check-circle-o fa-1x color-purple"></i>Weight Lose</li>
+                      <li class="inactive"><i class="fa-li fa fa-times-circle-o fa-1x "></i>Yoga</li>
+                      <li class="inactive"><i class="fa-li fa fa-times-circle-o fa-1x "></i>Yoga</li>
+                    </ul>
+                    <ul class="fa-ul pli40 col s6 m6 l6">
+                      <li><i class="fa-li fa fa-check-circle-o fa-1x color-purple"></i>Weight Lose</li>
+                      <li><i class="fa-li fa fa-check-circle-o fa-1x color-purple"></i>Yoga</li>
+                      <li class="inactive"><i class="fa-li fa fa-times-circle-o fa-1x "></i>Personal Trainer</li>
+                      <li><i class="fa-li fa fa-check-circle-o fa-1x color-purple"></i>Weight Lose</li>
+                      <li><i class="fa-li fa fa-check-circle-o fa-1x color-purple"></i>Weight Lose</li>
+                      <li class="inactive"><i class="fa-li fa fa-times-circle-o fa-1x "></i>Yoga</li>
+                      <li class="inactive"><i class="fa-li fa fa-times-circle-o fa-1x "></i>Yoga</li>
+                    </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+                <div class="col s12 l6 m6 amenities">
+                    <div class="row">
+                         <h5>Amenities</h5>
+                         <ul class="amenities-list ">
+                            <!-- <li><img src="../img/amenities/wifi.png" class="amenities-pic "></li> -->
+                            <li><img src="/images/amenities/music.png" class="amenities-pic "></li>
+                            <li><img src="/images/amenities/shower.png" class="amenities-pic "></li>
+                            <li><img src="/images/amenities/steam-room.png" class="amenities-pic "></li>
+                            <li></li>
+
+                         </ul>
+                    </div>
+
+                </div>
+            </div>
+
+
+            </div>
+
+
+        <div class="sample-card-2">
+
+            <div class="map-embed">
+                <section id="cd-google-map">
+                    <div id="google-container"></div>
+                    <div id="cd-zoom-in"></div>
+                    <div id="cd-zoom-out"></div>
+                </section>
+            </div>
+        </div>
+
+    </div>
+    <div class="col s12 l4 m12 margin-top">
+    <div class="gym-suggestions">
+            <div class="row">
+                <div class="gym-photo col s5 l5 m5">
+                    <img src="/images/gym-photo.jpg" >
+                </div>
+                 <div class="gym-description col s7 l7 m7">
+                 <h5 class="small-font"><i class="fa fa-bookmark fa-1x red2"></i>&nbsp;&nbsp;Sponsored</h5>
+                 <div class="gym-title">
+                    <h5>
+                        Body Zone Gym
+                    </h5>
+
+                    </div>
+                 <p>
+                            <ul class="fa-ul">
+                              <li><i style="margin-left:10px;" class="fa-li fa fa-map-marker fa-2x"></i>E-154, Part-2,Greater Kailash.New Delhi-110001</li>
+                            </ul>
+                        </p>
+                 <div class="rating">3.6</div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="gym-suggestions">
+            <div class="row">
+                <div class="gym-photo col s5 l5 m5">
+                    <img src="/images/gym-photo-2.jpg" >
+                </div>
+                 <div class="gym-description col s7 l7 m7">
+                 <h5 class="small-font"><i class="fa fa-bookmark fa-1x red2"></i>&nbsp;&nbsp;Sponsored</h5>
+                 <div class="gym-title">
+                    <h5>
+                        Body Zone Gym
+                    </h5>
+
+                    </div>
+                 <p>
+                            <ul class="fa-ul">
+                              <li><i style="margin-left:10px;" class="fa-li fa fa-map-marker fa-2x"></i>E-154, Part-2,Greater Kailash.New Delhi-110001</li>
+                            </ul>
+                        </p>
+                 <div class="rating">3.6</div>
+                </div>
+
+            </div>
+
+        </div>
+     <div id="download-card"class="download-card">
+
+<img src="/images/phone-download-app.png" class="responsive-img phone-download-app">
+<i class="fa fa-heart fa-2x red3 heart"></i>
+<div class="download-description">
+    <h5>Your personal heathcare app</h5>
+    <p>Download the FitSquare app and let it take care of your overall fitness, diet, activity and much more</p>
+    <button href="#downlobuttond" class="download-button-2 purple-3 center-block" style="margin-top:20px;">Download</button>
+</div>
+
+    </div>
+
+        <div class="list-business">
+            <div class="row">
+                <div class="col s3 l3 m3">
+                    <img src="/images/location-marker.png" class="responsive-img location-marker">
+                </div>
+                 <div class="col s9 l9 m9 know-more-description">
+                 <h5 style="float:left;"><img class="fitsquare-icon" src="/images/fitsquare-icon.png">List Your Business</h5>
+                 <p>Make Your Online Presence in <b>Fitsquare</b></p>
+                 <button href="#downlobutton" class="download-button-2 purple-3 center-block" style="margin-top:20px;">Know More</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="gym-nearby">
+            <div class="row">
+                <div class="gym-photo col s5 l5 m5">
+                    <img src="/images/gym-photo-2.jpg" >
+                </div>
+                 <div class="gym-description col s7 l7 m7">
+                 <h5 class="small-font"><i class="fa fa-location-arrow fa-1x red2"></i>&nbsp;&nbsp;Nearby</h5>
+                 <div class="gym-title">
+                    <h5>
+                        Body Zone Gym
+                    </h5>
+
+                    </div>
+                 <p>
+                            <ul class="fa-ul">
+                              <li><i style="margin-left:10px;" class="fa-li fa fa-map-marker fa-2x"></i>E-154, Part-2,Greater Kailash.New Delhi-110001</li>
+                            </ul>
+                        </p>
+                 <div class="rating">3.6</div>
+                </div>
+            </div>
+        </div>
+  </div>
+  </div>
+  </div>
+    </section>
+ </div>

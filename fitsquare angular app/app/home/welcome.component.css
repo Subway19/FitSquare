@@ -1,0 +1,182 @@
+.grey-text {
+    color: #4D4D4D!important;
+}
+.select-dropdown {
+  display: none;
+}
+.row .col {
+    padding: 0 .05rem;
+}
+
+#marker{
+
+	background-color: white;
+
+	position: relative;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  overflow-x: hidden;
+	margin-top:100px;
+}
+
+#marker  img{
+  width:110px;
+   height:160px ;
+   margin-top:-20px
+}
+#marker  h5, #marker p{
+margin-left:-50px;
+}
+
+#marker button{
+   margin-top:20px;
+   margin-left:-100px;
+}
+
+.phone-number {
+  height: 3rem;width:
+  16rem;padding-left:67px;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+  border: 1px solid white;
+}
+.send-link-btn {
+  margin-left: -5px;
+  height: 3rem;
+  width: 7rem;
+  background-color: #42126b;
+  color: white;
+  border: 1px solid #42126b;
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+}
+.send-link-btn:hover {
+  background: #3d3d3d;
+}
+.google-play-icon {
+  margin-left: 16px;
+  width: 26%;
+}
+.locality-search{
+  color: #333;
+  margin-top: -17px;
+  position: absolute;
+  left: 18%;
+  height: 40px;
+  width: 50%;
+  border-top-left-radius: 5px;
+  border: 1px solid #f6f6f6;
+  background-color: #f6f6f6;
+  padding-left: 60px;
+  background-image: url(/images/icon2.ico);
+  background-position: 5px 5px;
+  background-repeat: no-repeat;
+  border-right: 1.8px solid grey;
+  border-bottom-left-radius: 5px;
+}
+.search-gyms {
+  color: #333;
+  margin-top: -17px;
+  position: absolute;
+  left: 38%;
+  height: 41px;
+  width: 38%;
+  border: 1px solid #f6f6f6;
+  background-color: #f6f6f6;
+  background-image: url(/images/icon1.ico);
+  background-position: 5px 5px;
+  background-repeat: no-repeat;
+  padding-left: 60px;
+}
+.search-gyms-btn {
+  position: absolute;
+  left: 75.7%;
+  top: 107.5%;
+  width: 89%;
+  margin-left: -43px;
+  margin-top: 1px;
+  /* padding-left: 16px; */
+
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  height: 41px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  line-height: 48px;
+  width: 7%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: rgb(226, 48, 121);
+  border: 1px solid #662d91!important;
+
+
+
+
+
+
+  background-position: 5px 5px;
+  background-repeat: no-repeat;
+
+} 
+
+.success-msg {
+  color : cyan;
+}
+.error-msg {
+  color : coral;
+}
+.city-details img {
+  max-width: 10%!important;
+}
+
+
+.row .col.l3 {
+    width: 21.6%;
+}
+.cities img {
+  cursor: pointer;
+  filter: brightness(2%);
+  -webkit-filter: brightness(2%);
+  -moz-filter: brightness(2%);
+  -o-filter: brightness(2%);
+  -ms-filter: brightness(2%);
+}
+.cities img:hover {
+  cursor: pointer;
+  filter: brightness(92%);
+  -webkit-filter: brightness(92%);
+  -moz-filter: brightness(92%);
+  -o-filter: brightness(92%);
+  -ms-filter: brightness(80%);
+}
+h1 {
+      font-weight: bold;
+}
+.cities-container{
+  width:100% !important;
+}
+.our-presence{
+  margin-left: 0px !important;
+}
+.img-gym {
+  margin-top: 63px;
+  margin-left: 53px;
+}
+.img-gym-text {
+  margin-top: -29px;
+  margin-left: 108px;
+}
+.img-path-text {
+  margin-top: -22px;
+  margin-left: 213px;
+}
+.img-path {
+  position: absolute;
+  margin-top: -4px;
+  margin-left: 75px;
+}

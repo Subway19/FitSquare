@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>Fitsquare</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/gym_search.css">
+	<link rel="stylesheet" type="text/css" href="css/navbar.css">
+	<link rel="stylesheet" type="text/css" href="css/footer.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/angular-material/angular-material.min.css">
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-animate/angular-animate.js"></script>
+	<script src="bower_components/angular-material/angular-material.min.js"></script>
+	<script src="bower_components/angular-aria/angular-aria.min.js"></script>
+	<!--
+    The files needed by React
+    <script src="bower_components/react/react.js"></script>
+    <script src="bower_components/react/react-dom.js"></script>
+	<script src="bower_components/babel/browser.js"></script>
+    <script src="bower_components/ngReact/ngReact.js"></script>
+
+    -->
+
+<!--	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
+
+    <!--<script src="js/angular_gym_search.js"></script>-->
+		<script src="js/navbar.js"></script>
+		<script src="js/details.js"></script>
+
+    <!-- Files needed by Polymer -->
+	<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+	<link rel="import" href="bower_components/polymer/polymer.html">
+	<link rel="import" href="bower_components/paper-styles/paper-styles.html">
+	<link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
+	<link rel="import" href="bower_components/paper-radio-button/paper-radio-button.html">
+<!--	<link rel="import" href="bower_components/paper-radio-group/paper-radio-group.html">  -->
+	<link rel="import" href="bower_components/google-apis/google-maps-api.html">
+	<link rel="import" href="bower_components/google-map/google-map.html">
+
+	<!-- Font Awesome for all the glyphicons in the page -->
+	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+	<style is="custom-style">
+		/*Filters*/
+		paper-checkbox.pink {
+			--paper-checkbox-checked-color:#cf0f50 ;
+			--paper-checkbox-checked-ink-color:#cf0f50 ;
+			--paper-checkbox-unchecked-color:#cf0f50 ;
+			--paper-checkbox-unchecked-ink-color:#cf0f50 ;
+			--paper-checkbox-label-color:black ;
+			--paper-checkbox-label-checked-color:black ;
+			--paper-checkbox-checkmark-color:#cf0f50;
+
+		}
+		paper-radio-button.pink {
+    --paper-radio-button-checked-color: #cf0f50;
+    --paper-radio-button-checked-ink-color: #cf0f50;
+    --paper-radio-button-unchecked-color: #cf0f50;
+    --paper-radio-button-unchecked-ink-color:#cf0f50;
+    --paper-radio-button-label-color: #cf0f50;
+  }
+	</style>
+</head>
+<body ng-controller="gymController">
+
+<nav class="navbar custom-nav navbar-fixed-top" role="navigation">
+	<div class="container-fluid" style="padding-bottom:7px;">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle custom-navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<i class="fa fa-bars"></i>
+
+			</button>
+			<a class="navbar-brand" href="#"><p><img src="images/logo.png" class="logo"><span class="hide-on-small">FITSQUARE</span></p></a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="custom-navbar-links"><a href="#" class="custom-nav-a">HOME</a></li>
+				<li class="custom-navbar-links"><a href="#" class="custom-nav-a">ABOUT</a></li>
+				<li class="custom-navbar-links"><a href="#" class="custom-nav-a">CONTACT</a></li>
+				<li class="custom-navbar-links"><a href="#" class="custom-nav-login">Login</a></li>
+			</ul>
+
+		</div><!-- /.navbar-collapse -->
+	</div>
+
+
+<!-- Filter Goes Here -->
+
+
+</nav>
+
+			<form class="custom-navbar-form hide-on-small" role="search">
+				<div class="form-group custom-search-icon">
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-search"></i>
+							<input type="text" class="form-control custom-nav-search " placeholder="Search for gyms type your locality..."/>
+					</div>
+				</div>
+			</form>
+			<!-- Searchbar ends -->
+
+<br><br><br><br>
+<!-- Listing Gooes Here -->
+
+<div class="row">
+	<div class="col-md-8">
+		<div class="gym-card top-border-radius"  style="padding-bottom:0px;">
+			<div class="row" style="padding-bottom:0px;">
+				<div class="col-md-1">
+					<i class="fa fa-location-arrow custom-location-arrow"></i>
+				</div>
+				<div class="col-md-11">
+					<div class="location-heading">
+						<p>Vasant Kunj Restaurants, New Delhi</p>
+					</div>
+					<div class="location-sub-heading">
+						<p>Showing 21 gyms in Vasant Kunj</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<google-map latitude="37.77493" longitude="-122.41942" style="height:30vh;"></google-map>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='col-md-4 custom-pull'>
+		<div class="col-md-10 ads">
+			<div class="col-md-4 gym-ad-image">
+			</div>
+			<div class="col-md-8">
+				<div class="row gym-ad-title">
+					<div class="col-md-9">
+						<i class="fa fa-bookmark" aria-hidden="true" style="color:#c0272d; font-size:15px;"></i> Sponsored
+					</div>
+					<div class="col-md-2 gym-ad-title-rating">
+						4.6
+					</div>
+				</div>
+
+				<div class="row">
+				<div class="col-md-12 gym-ad-name"><h4>Spartaa Fitness</h4></div>
+				<div class="col-md-12 gym-ad-address"><span><i class="fa fa-map-marker custom-map-marker col-md-1" aria-hidden="true"></i></span> <small>2 Floor Building No 110, Safdarjung Enclave, Near NCC Gate Delhi - 110029</small></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-10 ads">
+			<div class="col-md-4 gym-ad-image">
+			</div>
+			<div class="col-md-8">
+				<div class="row gym-ad-title">
+					<div class="col-md-9">
+						<i class="fa fa-bookmark" aria-hidden="true" style="color:#c0272d; font-size:15px;"></i> Sponsored
+					</div>
+					<div class="col-md-2 gym-ad-title-rating">
+						4.6
+					</div>
+				</div>
+
+				<div class="row">
+				<div class="col-md-12 gym-ad-name"><h4>Spartaa Fitness</h4></div>
+				<div class="col-md-12 gym-ad-address">	<span><i class="fa fa-map-marker custom-map-marker col-md-1" aria-hidden="true"></i></span> <small>2 Floor Building No 110, Safdarjung Enclave, Near NCC Gate Delhi - 110029</small></div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+
+	</div>
+</div>
+<div class="row" id="gym-list-back">
+	<div class="col-md-8">
+		<div class="gym-card bottom-border-radius">
+			<div class="row" id="gym-list">
+				<div class="col-md-4">
+					<div class="filter-holder">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="filter-heading">
+									<p>FILTERS</p>
+								</div>
+
+								<div class="filter-heading" style="padding-bottom:15px;border:none;">
+									<span>Sort By</span>
+									<div class="filter-sort">
+										<div class="dropdown">
+											<button class="dropdown-toggle sort-button" type="button" data-toggle="dropdown" ng-model="sort_by">
+												{{sort_by}}
+												<i class="fa fa-chevron-down"></i>
+											</button>
+											<ul class="dropdown-menu">
+												<li ng-click="sort_by='Popularity'">Popularity</li>
+												<li ng-click="sort_by='Rating'">Rating</li>
+												<li style="border:none;" ng-click="sort_by='Facilities'">Facilities</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="filter-list">
+									<div class="row">
+										<div class="col-md-9 col-md-push-1">
+											<div class="filter-checkbox-title">
+												Online Booking
+											</div>
+										</div>
+			            	<div class="col-md-3 filter-checbox-holder">
+											<md-checkbox class="green">
+											</md-checkbox>
+										</div>
+			            </div>
+									<div class="row">
+										<div class="col-md-9 col-md-push-1">
+											<div class="filter-checkbox-title">
+												Nutritionist
+											</div>
+										</div>
+			            	<div class="col-md-3 filter-checbox-holder" >
+											<md-checkbox  class="green">
+											</md-checkbox>
+										</div>
+			            </div>
+									<div class="row">
+										<div class="col-md-9 col-md-push-1">
+											<div class="filter-checkbox-title">
+												Wi-Fi
+											</div>
+										</div>
+			            	<div class="col-md-3 filter-checbox-holder">
+											<md-checkbox  class="green">
+											</md-checkbox>
+										</div>
+			            </div>
+									<div class="row">
+										<div class="col-md-9 col-md-push-1">
+											<div class="filter-checkbox-title">
+												Credit Cards
+											</div>
+										</div>
+			            	<div class="col-md-3 filter-checbox-holder" >
+											<md-checkbox  class="green">
+											</md-checkbox>
+										</div>
+			            </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-8 gym-list-holder">
+
+					<!-- The List of gyms follows -->
+
+					<div class="row" ng-repeat="gym in gyms_data_from_the_server | orderBy:sort_by | filter_services:services_state | filter_amenities:amenities_state ">
+					<div class="col-md-12 gym-listing" key={{gym._id}} ng-click="viewSlideOut()">
+
+								<div class="gym-details-container">
+									<div class="col-md-12 gym-details-col">
+										<div class="row gym-details">
+											<div class="col-md-9">
+												<h4 class="gym-name">{{gym.name}}</h4>
+												<div class="gym-location">
+													<span><i class="fa fa-map-marker custom-map-marker col-md-1" aria-hidden="true"></i></span>  <span class="col-md-10" style="color:black;"><div class="gym-address">{{gym.address}}</div></span></div>
+											</div>
+											<div class="col-md-3 gym-rating-container">
+												<div class="gym-rating">{{gym.ratings.total}}</div>
+											</div>
+										</div>
+										<br/>
+											<div class="gym-tags-container row">
+												<div class="col-md-12 row">
+												<div ng-repeat="tag in gym.tags ">
+													<div class="col-md-3 col-xs-6 gym-tag">{{tag}}</div>
+												</div>
+												</div>
+											</div>
+									</div>
+								</div>
+							</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-4 custom-pull">
+
+
+
+		<div class="col-md-10 ads business-ad" style="padding:20px;">
+			<div class="col-md-4 gym-ad-image" style="background-image:url('images/location-marker.png');">
+			</div>
+			<div class="col-md-8">
+
+				<div class="row" style="margin-left:-10px;margin-top:20px;">
+				<div class="col-md-12 gym-ad-name"><h4>List your Business</h4></div>
+				<div class="col-md-12 gym-ad-address"><small>Make your online presence in <span>Fitsquare</span></small></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-md-push-3">
+					<div class="card-purple-holder">
+						<a class="purple-button">Know More</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-10 ads">
+			<div class="col-md-4 gym-ad-image">
+			</div>
+			<div class="col-md-8">
+				<div class="row gym-ad-title">
+					<div class="col-md-9">
+						<i class="fa fa-location-arrow" aria-hidden="true" style="color:#c0272d; font-size:15px;"></i> Nearby
+					</div>
+					<div class="col-md-2 gym-ad-title-rating">
+						4.6
+					</div>
+				</div>
+
+				<div class="row">
+				<div class="col-md-12 gym-ad-name"><h4>Spartaa Fitness</h4></div>
+				<div class="col-md-12 gym-ad-address"><span><i class="fa fa-map-marker custom-map-marker col-md-1" aria-hidden="true"></i></span> <small>2 Floor Building No 110, Safdarjung Enclave, Near NCC Gate Delhi - 110029</small></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-10 advert">
+			<div class="col-md-8 col-md-push-3">
+				<br>
+				<div class="advert-img">
+					<img src="images/phone-download-app.png">
+				</div>
+			</div>
+				<div class="row">
+				<div class="col-md-8 col-md-push-2 advert-name"><h4>Your personal healthcare app</h4></div>
+				<div class="col-md-8 col-md-push-2 advert-address"><small>Download the Fitsquare and let it take care of your overall fitness, diet, activity and much more</small></div>
+				</div>
+		</div>
+
+	</div>
+</div>
+
+
+<footer class="footer" ng-include="'footer.html'" >
+
+</footer>
+
+
+<!-- Footer -->
+<!--
+<footer class="container-fluid">
+	<div class="row footer-inner">
+		<div class="col-md-12 footer-links">
+			<div class="col-md-3 col-xs-12 fitsquare-logo">
+          <img src="images/logo.png"/>
+          <h2>FITSQUARE</h2>
+			</div>
+			<div class="col-md-3">
+			<ul>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Media Kit</a></li>
+			</ul>
+			</div>
+			<div class="col-md-3">
+			<ul>
+				<li><a href="#">Privacy Policy</a></li>
+				<li><a href="#">Terms & Conditions</a></li>
+				<li><a href="#">Support</a></li>
+				<li><a href="#">Feedback</a></li>
+			</ul>
+			</div>
+			<div class="col-md-3">
+			<ul>
+				<li><a href="#">Careers</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Sitemap</a></li>
+			</ul>
+			</div>
+		</div>
+
+		<div class="footer-social col-md-12">
+			<div class="footer-social-title">
+				Join Us On
+			</div>
+			<div class="footer-social-links">
+				<div class="col-md-2"><a href="#">Facebook</a></div>
+				<div class="col-md-2"><a href="#">Google+</a></div>
+				<div class="col-md-2"><a href="#">Twitter</a></div>
+				<div class="col-md-2"><a href="#">Linkedin</a></div>
+				<div class="col-md-2"><a href="#">Youtube</a></div>
+				<div class="col-md-2"><a href="#">Pinterest</a></div>
+			</div>
+		</div>
+	</div>
+</footer> -->
+</body>
+</html>

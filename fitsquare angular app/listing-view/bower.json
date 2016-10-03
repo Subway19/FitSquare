@@ -1,0 +1,22 @@
+{
+  "name": "fitsquare",
+  "description": "Connecting India's Gyms",
+  "main": "index.js",
+  "authors": [
+    "Rahul Krishna"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/try-git/try_git",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "paper-checkbox": "PolymerElements/paper-checkbox#^1.2.0",
+    "google-map": "GoogleWebComponents/google-map#^1.1.10"
+  }
+}

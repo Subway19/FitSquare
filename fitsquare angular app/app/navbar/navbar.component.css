@@ -1,0 +1,226 @@
+nav{
+	background-color: rgb(45, 45, 45);
+}
+
+#logo-container{
+	width:10px;
+	opacity: 0.9;
+}
+
+.nav-image {
+	max-width: 210px;!important;
+    margin-top: 13px!important;
+    height: 36px;
+    text-align: left;
+}
+.login-g {
+	max-width: auto !important;
+	width: 273px;
+	height: 44px;
+	position: relative;
+	left: 60%;
+
+}
+.login-btn-a {
+	position: absolute;
+	left: 90%;
+	margin-top: 21px;
+	z-index: 9999;
+	color: white;
+	border: 2px solid white;
+	padding: 7px 21px 4px 24px;
+}
+
+
+.login-btn {
+  background: #42126b;
+  color:white;
+  height: 44px;
+  width: 75%;
+  border: none;
+  font-weight: 900;
+  font-size: 16px;
+	margin-left: 18px;
+}
+.login-btn:hover {
+  background: #3d3d3d;
+  color:white;
+  height: 44px;
+  width: 75%;
+  border: none;
+  font-weight: 900;
+  font-size: 16px;
+}
+input, textarea, text {
+    color: #46343A;
+
+}
+input[type=text] {
+      font-size: 1rem;
+}
+input[type=password] {
+      font-size: 1rem;
+}
+/*.signin-img{
+  max-width: 130%!important;
+}*/
+input[type=date]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=search]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=text]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #42126b !important;
+    box-shadow: 0 1px 0 0 #26a69a;
+		padding-left: 10px;
+		width: 72%;
+}
+input[type=text]:focus{
+     border-bottom: 1px solid #42126b !important;
+     box-shadow: 0 1px 0 0 #42126b!important;
+}
+input[type=password]:focus{
+     border-bottom: 1px solid #42126b !important;
+     box-shadow: 0 1px 0 0 #42126b!important;
+}
+.fb-image {
+	margin-top: 10px;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #46343A;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #46343A;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #46343A;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #46343A;
+}
+:placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+  color:    #46343A;
+}
+.input-field input {
+	border-radius: 2px !important;
+/*color: #42126b !important;*/
+border: 1px solid #42126b !important;
+}
+input[type=date], input[type=datetime-local], input[type=email], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], textarea.materialize-textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #9e9e9e;
+    border-radius: 0;
+    outline: 0;
+    /* height: 3rem; */
+    height: 44px;
+    /* left: 41%; */
+    margin-left: 48px;
+    width: 71%;
+    font-size: 1rem;
+    /* margin: 0 0 15px; */
+    padding-left: 15px; 
+    box-shadow: none;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    transition: all .3s;
+		margin-bottom: -3px;
+}
+.login-h5 {
+	line-height: 140%!important;
+	color:#4d4d4d;
+	margin-left: 47px;
+	margin-top: -36px;
+}
+.login-modal-img {
+	 width:40px;
+	 height:40px;
+	 margin-top:1px;
+}
+.divider {
+	height:1px;
+	margin-top:15px;
+	margin-bottom:15px;
+	margin-left: 442px;
+}
+.divider-signup{
+	height:1px;
+	margin-top:1px;
+	margin-bottom:1px;
+}
+.modal-login-btn{
+	padding-top: 4px;
+	color : white;
+}
+.login-h6 {
+	color:indigo;
+	text-align:center;
+	margin-bottom:-9px
+}
+#login-modal {
+	width:60%;
+}
+.modal-header {
+	background-color:#e3e3e3;
+}
+.signup-wrap{
+	top:-500px;
+	position: absolute;
+	/*left:400px;*/
+	left :50%;
+	width: 50%;
+}
+.signup-wrap-after{
+	top:0px;
+	position: absolute;
+	left :53%;
+	width: 50%;
+	background-color: #fafafa !important;
+	-webkit-animation:slideIn 0.4s;
+}
+.signup-wrap-hide{
+	top:-500px;
+	position: absolute;
+	left:1900px;
+	background-color: #fafafa !important;
+	-webkit-animation:slideOut 0.4s;
+}
+#login-modal2{
+	overflow-x: hidden !important;
+}
+@-webkit-keyframes slideIn{
+		from{
+			left:19000px;
+		}
+		to{
+			left:53%;
+		}
+}
+@-webkit-keyframes slideOut{
+		from{
+			left:3%;
+		}
+		to{
+			left:0px;
+		}
+}
+.input-width {
+	left :53%;
+	width: 50%;
+}
+.img-modal {
+	position: absolute;
+	width: 53%;
+	height: 600px;
+}
+.input-width-signup {
+	margin-left: 35px!important;
+}

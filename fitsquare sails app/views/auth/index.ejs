@@ -1,0 +1,179 @@
+<section id="third">
+
+
+<!--
+<div class="login-home-back">
+</div> -->
+<!--
+<div class="login-home-pattern">
+  <p style="text-align:center;color:white;margin-top:150px;">
+    <!-img src="/images/logo.png" style="height:50px;"><br><br-->
+    <!-- <span class="user-name element-login" style="letter-spacing:5px;font-size:25px;"></span>
+  </p>
+</div> --> -->
+
+<!-- <div class="login-home">
+
+</div> -->
+
+<!--Second for social-->
+<!-- <div class="row login-wrap">
+  <div class="col l3 m12 s12">
+    <p style="opacity:0;">Login</p>
+  </div>
+  <div class="col l6 m12 s12"> -->
+
+    <!-- <a href="/auth/facebook">Login with Facebook</a> -->
+    <!-- <div class="login-fb col l1 m1 s12" >
+<p style="opacity:0;">Login</p>
+    </div>
+    <div class="login-fb col l5 m5 s12" style="background: #3B5998;color:white;">
+    <p style="text-align:center">Login with Facebook</p>
+    </div>
+    <div class="login-fb col l1 m1 s12" >
+<p style="opacity:0;">Login</p>
+    </div>
+    <div class="login-fb col l5 m5 s12" style="background: #DC4B39;color:white;">
+    <p style="text-align:center">Login with Google</p>
+    </div> -->
+
+    <!-- <a href="/auth/google">Login with Google</a> -->
+
+<!--
+  </div>
+  <div class="col l3 m12 s12">
+    <p style="opacity:0;">Login</p>
+  </div>
+</div> -->
+
+<!--Second for social-->
+
+<div class="row login-wrap">
+  <div class="col l3 m12 s12">
+    <p style="opacity:0;">Login</p>
+  </div>
+  <div class="col l6 m12 s12">
+    <form action="/login/authenticate" method="POST">
+      <div class="input-field col s12">
+        <input type="text"  name="email" id="email" placeholder="    Your E - Mail here *">
+      </div>
+      <div class="input-field col s12">
+        <input type="password"  name="password" id="password" placeholder="    Your Password here *">
+      </div>
+      <div class="input-field col s12">
+        <p style="text-align:center"><input type="submit" class="btn btn-submit" value="Log In"></p>
+      </div>
+      <!-- <div class="input-field col s12 ">
+       <input type="text" name="email" id="email" placeholder="    Your Message here *">
+     </div> -->
+    </form>
+  </div>
+  <div class="col l3 m12 s12">
+    <p style="opacity:0;">Login</p>
+  </div>
+</div>
+
+<!-- Modal Trigger -->
+ <a class="waves-effect waves-light btn modal-trigger" href="#modal2">Modal</a>
+
+<style type = "text/css">
+.login-btn {
+  background: #46343A;
+  color:white;
+  height: 41px;
+  width: 152px;
+  border: none;
+  font-weight: 900;
+  font-size: 16px;
+}
+.login-btn:hover {
+  background: #3d3d3d;
+  color:white;
+  height: 41px;
+  width: 152px;
+  border: none;
+  font-weight: 900;
+  font-size: 16px;
+}
+input, textarea, text {
+    color: #46343A;
+
+}
+input[type=text] {
+      font-size: 1.5rem;
+}
+input[type=password] {
+      font-size: 1.5rem;
+}
+.signin-img{
+  max-width: 130%!important;
+}
+</style>
+
+ <!-- Modal Structure -->
+ <div id="modal2" class="modal bottom-sheet" style="z-index: 1003; display: block; opacity: 0; bottom: -100%; max-height:50%;">
+           <div class="modal-content">
+             <h5>Let's make you fit</h5>
+             <div class="row login-wrap">
+
+               <div class="col l6 m12 s12"  style="border-right : thick solid #d4d4d4">
+                 <form action="/login/authenticate" method="POST">
+                   <div class="input-field col s12" >
+                     <input type="text"  name="email" id="email" placeholder="    Your E - Mail here *">
+                   </div>
+                   <div class="input-field col s12">
+                     <input type="password"  name="password" id="password" placeholder="    Your Password here *">
+                   </div>
+                   <div class="input-field col s12">
+                     <p style="text-align:center"><input type="submit" class="login-btn" value="Log In"></p>
+                   </div>
+                 </form>
+               </div>
+               <div class="col l2 m12 s12" style="margin-left:167px;">
+                 <div class="login-fb col l12 m12 s12">
+                 <h5 style="text-align:center;">Or</h5>
+                 </div>
+                 <div class="login-fb col l12 m12 s12">
+                 <a href="/auth/google">
+                 <img src="/images/google-btn.png"  class="responsive-img signin-img"></a>
+                 </div>
+                 <div class="login-fb col l12 m12 s12">
+                 <a href="/auth/facebook">
+                 <img src="/images/fb-btn.png" class="responsive-img signin-img"></a>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+
+
+
+<div class="row login-wrap">
+  <div class="col l3 m12 s12">
+    <h5 style="color:white;">Or login using social logins</h5>
+  </div>
+  <div class="col l6 m12 s12">
+
+    <!-- <a href="/auth/facebook">Login with Facebook</a> -->
+    <div class="login-fb col l1 m1 s12" >
+<p style="opacity:0;">Login</p>
+    </div>
+    <div class="login-fb col l5 m5 s12" style="background: #3B5998;color:white;">
+    <p style="text-align:center">Login with Facebook</p>
+    </div>
+    <div class="login-fb col l1 m1 s12" >
+<p style="opacity:0;">Login</p>
+    </div>
+    <div class="login-fb col l5 m5 s12" style="background: #DC4B39;color:white;">
+    <p style="text-align:center">Login with Google</p>
+    </div>
+
+    <!-- <a href="/auth/google">Login with Google</a> -->
+
+
+  </div>
+  <div class="col l3 m12 s12">
+    <p style="opacity:0;">Login</p>
+  </div>
+</div>
+</section>

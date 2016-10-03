@@ -1,0 +1,55 @@
+<style>
+.login-home-back{
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  //background:linear-gradient(160deg, #794ab3 0%, #ee717e 100%);
+  width:100%;
+}
+.login-home-pattern{
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+ // background: url('/images/pattern.png');
+  height:100%;
+}
+.login-wrap{
+  margin-top:335px;
+}
+</style>
+
+<div class="login-home-back">
+</div>
+
+<div class="login-home-pattern">
+  <p style="text-align:center;color:white;margin-top:150px;">
+    <!--img src="/images/logo.png" style="height:50px;"><br><br-->
+    <span class="user-name element-login" style="letter-spacing:5px;font-size:25px;"></span>
+  </p>
+</div>
+
+<div class="login-home">
+
+</div>
+
+<div class="row login-wrap">
+  <div class="col l3 m12 s12">
+    <p style="opacity:0;">Login</p>
+  </div>
+  <div class="col l6 m12 s12">
+    <form action="/login/authenticate" method="POST">
+      <div class="input-field col s12">
+        <input type="text" name="email" id="email" placeholder="    Your E - Mail here *">
+      </div>
+      <div class="input-field col s12">
+        <p style="text-align:center"><input type="submit" class="btn btn-submit" value="Log In"></p>
+      </div>
+    </form>
+  </div>
+  <div class="col l3 m12 s12">
+    <p style="opacity:0;">Login</p>
+  </div>
+</div>

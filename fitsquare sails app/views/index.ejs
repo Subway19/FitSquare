@@ -1,0 +1,468 @@
+
+<div>
+<script src="/js/wow.min.js"></script>
+<script type ="text/javascript">
+               new WOW().init();
+</script>
+<style type="text/css">
+.grey-text {
+    color: #4D4D4D!important;
+}
+.select-dropdown {
+  display: none;
+}
+.row .col {
+    padding: 0 .05rem;
+}
+.phone-number {
+  height: 3rem;width:
+  16rem;padding-left:67px;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+  border: 1px solid white;
+}
+.send-link-btn {
+  margin-left: -5px;
+  height: 3rem;
+  width: 7rem;
+  background-color: #42126b;
+  color: white;
+  border: 1px solid #42126b;
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+}
+.send-link-btn:hover {
+  background: #3d3d3d;
+}
+.google-play-icon {
+  margin-left: 16px;
+  width: 26%;
+}
+.locality-search{
+  color: #333;
+  margin-top: -17px;
+  position: absolute;
+  left: 18%;
+  height: 41px;
+  width: 20%;
+  border-top-left-radius: 5px;
+  border: 1px solid #f6f6f6;
+  background-color: #f6f6f6;
+  padding-left: 60px;
+  background-image: url(/images/icon2.ico);
+  background-position: 5px 5px;
+  background-repeat: no-repeat;
+  border-right: 1.8px solid grey;
+  border-bottom-left-radius: 5px;
+}
+.search-gyms {
+  color: #333;
+  margin-top: -17px;
+  position: absolute;
+  left: 38%;
+  height: 41px;
+  width: 38%;
+  border: 1px solid #f6f6f6;
+  background-color: #f6f6f6;
+  background-image: url(/images/icon1.ico);
+  background-position: 5px 5px;
+  background-repeat: no-repeat;
+  padding-left: 60px;
+}
+.search-gyms-btn {
+  position: absolute;
+  left: 77.5%;
+  margin-left: -43px;
+  margin-top: -17px;
+  /* padding-left: 16px; */
+  padding-top: 4px;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  height: 41px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  line-height: 48px;
+  width: 7%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #662d91;
+  border: 1px solid #662d91!important;
+}
+.success-msg {
+  color : cyan;
+}
+.error-msg {
+  color : coral;
+}
+.city-details img {
+  max-width: 10%!important;
+}
+
+
+.row .col.l3 {
+    width: 21.6%;
+}
+.cities img {
+  cursor: pointer;
+  filter: brightness(40%);
+  -webkit-filter: brightness(40%);
+  -moz-filter: brightness(40%);
+  -o-filter: brightness(40%);
+  -ms-filter: brightness(40%);
+}
+.cities img:hover {
+  cursor: pointer;
+  filter: brightness(80%);
+  -webkit-filter: brightness(80%);
+  -moz-filter: brightness(80%);
+  -o-filter: brightness(80%);
+  -ms-filter: brightness(80%);
+}
+h1 {
+      font-weight: bold;
+}
+.cities-container{
+  width:100% !important;
+}
+.our-presence{
+  margin-left: 0px !important;
+}
+.img-gym {
+  margin-top: 63px;
+  margin-left: 53px;
+}
+.img-gym-text {
+  margin-top: -29px;
+  margin-left: 108px;
+}
+.img-path-text {
+  margin-top: -22px;
+  margin-left: 213px;
+}
+.img-path {
+  position: absolute;
+  margin-top: -4px;
+  margin-left: 75px;
+}
+
+</style>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<section id="first">
+<div style="background-color: rgba(0,0,0,0.4);position: absolute;top: 0px;width: 100%;height: 500px;">
+
+
+  <div class="container">
+
+      <div class="hero">
+          <h1 id="section-header" class="section-header">Explore the fitness havens nearby.</h1>
+          <div class="services-tab">
+              <a href="#">Gyms</a>
+              <a href="#">Pathlabs</a>
+              <a href="#">Events</a>
+              <a href="#">Shop</a>
+          </div>
+
+
+        <div class="row">
+          <div class=" col s6">
+            <input id="searchterm" class="locality-search" placeholder="Your Location">
+            <div>
+              <ul id="results">
+                <!-- <li class="label ttupper">Suggested Searches</li> -->
+                <!-- <li class = "item">
+                  <div  class="start-step-label">
+                      Body Structure Fitness Gym  </div>
+                </li> -->
+              </ul>
+            </div>
+          </div>
+          <div class=" col s6">
+            <input id="search-gyms" class="search-gyms" placeholder="Search for gyms, amenities or fitness">
+            <div>
+              <ul id="search-results">
+                <!-- <li class="label ttupper">Suggested Searches</li> -->
+                <!-- <li class = "item">
+                  <div  class="start-step-label">
+                      Body Structure Fitness Gym  </div>
+                </li> -->
+              </ul>
+            </div>
+              </div>
+              <div class="search-gyms-btn">
+                      <i class="material-icons">search</i>
+              </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="primary-cards wow fadeInUp" data-wow-duration="1s" style="margin-top:110px;background-color:white;">
+            <!-- <a class=" card col-sm-4 col-xs-12 col-lg-4 col-md-4"> -->
+            <a class="card-link col s12 l4 m12   "  >
+            <div class="card new-card ">
+                <div class="card-title">Gyms</div>
+                <div class="card-desc">Just search for your locality and we will show only the fitness destinations close to you. Its that Simple.</div>
+                <div class="card-image rbpg "><img src="/images/tredmill.png" class="responsive-img vectors lazy"/></div>
+            </div>
+            </a>
+
+            <a class="card-link col s12 l4 m12  "  >
+            <div class="card new-card ">
+                <div class="card-title">Amenities</div>
+                <div class="card-desc">Explore 25+ unique filters, amenities, pricings, and reviews. Selecting the best place for you.</div>
+                <div class="card-image rbpg "><img src="/images/ball.png" class="responsive-img vectors lazy"/></div>
+            </div>
+            </a>
+            <a class="card-link col s12 l4 m12 "  >
+            <div class="card new-card ">
+                    <div class="card-title">Diet + Workout</div>
+                    <div class="card-desc">Sync wear daily workouts with your diet using our Fitsquare app and see our everyday result.</div>
+                    <div class="card-image rbpg "><img src="/images/diet.png" class="responsive-img vectors lazy"/></div>
+            </div>
+            </a>
+        </div>
+      </div>
+  </div>
+</div>
+</section>
+
+
+
+    <section id="second" class=" grey-box">
+    <div class="container cities-container">
+        <div class="row">
+
+        </div>
+        <div class="row our-presence">
+            <h4 class="cities-header">Our Presence</h4>
+            <div class="row">
+                <div class="col s12 l3 m3" style="">
+                    <div id="cities-1" class="cities">
+                        <img src="/images/presence/hyderabad.jpg" class="responsive-img lazy">
+                        <h5 class="city-name">Mumbai</h5>
+                        <div id="city-details-1"class="city-details" >
+                          <div>
+                            <img src ="/images/icons/gym-icon.png"  class="img-gym">
+                              <div class="img-gym-text">124</div>
+                          </div>
+                          <div>
+                            <img src ="/images/icons/path-icon.png"  class="img-path">
+                              <div class="img-path-text">14</div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l3 m3">
+                    <div id="cities-2" class="cities">
+                        <img src="/images/presence/jaipur.jpg" class="responsive-img lazy">
+                        <h5 class="city-name">New Delhi</h5>
+                        <div id="city-details-1"class="city-details" >
+                          <div>
+                            <img src ="/images/icons/gym-icon.png"  class="img-gym">
+                              <div class="img-gym-text">124</div>
+                          </div>
+                          <div>
+                            <img src ="/images/icons/path-icon.png"  class="img-path">
+                              <div class="img-path-text">14</div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l3 m3">
+                    <div id="cities-3" class="cities">
+                        <img src="/images/presence/ahemdabad.jpg" class="responsive-img lazy">
+                        <h5 class="city-name">Chennai</h5>
+                        <div id="city-details-1"class="city-details" >
+                          <div>
+                            <img src ="/images/icons/gym-icon.png"  class="img-gym">
+                              <div class="img-gym-text">124</div>
+                          </div>
+                          <div>
+                            <img src ="/images/icons/path-icon.png"  class="img-path">
+                              <div class="img-path-text">14</div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l3 m3">
+                    <div id="cities-4" class="cities">
+                        <img src="/images/presence/chennai.jpg" class="responsive-img lazy">
+                        <h5 class="city-name">Kolkata</h5>
+                        <div id="city-details-1"class="city-details" >
+                          <div>
+                            <img src ="/images/icons/gym-icon.png"  class="img-gym">
+                              <div class="img-gym-text">124</div>
+                          </div>
+                          <div>
+                            <img src ="/images/icons/path-icon.png"  class="img-path">
+                              <div class="img-path-text">14</div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row" style="margin-top:25px;">
+                <div class="col s12 l3 m3">
+                    <div id="cities-1" class="cities">
+                        <img src="/images/presence/hyderabad.jpg" class="responsive-img lazy">
+                        <h5 class="city-name">Mumbai</h5>
+                        <div id="city-details-1"class="city-details" >
+                          <div>
+                            <img src ="/images/icons/gym-icon.png"  class="img-gym">
+                              <div class="img-gym-text">124</div>
+                          </div>
+                          <div>
+                            <img src ="/images/icons/path-icon.png"  class="img-path">
+                              <div class="img-path-text">14</div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l3 m3">
+                    <div id="cities-2" class="cities">
+                        <img src="/images/presence/jaipur.jpg" class="responsive-img lazy">
+                        <h5 class="city-name">New Delhi</h5>
+                        <div id="city-details-1"class="city-details" >
+                          <div>
+                            <img src ="/images/icons/gym-icon.png"  class="img-gym">
+                              <div class="img-gym-text">124</div>
+                          </div>
+                          <div>
+                            <img src ="/images/icons/path-icon.png"  class="img-path">
+                              <div class="img-path-text">14</div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l3 m3">
+                    <div id="cities-3" class="cities">
+                        <img src="/images/presence/ahemdabad.jpg" class="responsive-img lazy">
+                        <h5 class="city-name">Chennai</h5>
+                        <div id="city-details-1"class="city-details" >
+                          <div>
+                            <img src ="/images/icons/gym-icon.png"  class="img-gym">
+                              <div class="img-gym-text">124</div>
+                          </div>
+                          <div>
+                            <img src ="/images/icons/path-icon.png"  class="img-path">
+                              <div class="img-path-text">14</div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l3 m3">
+                    <div id="cities-4" class="cities">
+                        <img src="/images/presence/chennai.jpg" class="responsive-img lazy">
+                        <h5 class="city-name">Kolkata</h5>
+                        <div id="city-details-1"class="city-details" >
+                          <div>
+                            <img src ="/images/icons/gym-icon.png"  class="img-gym">
+                              <div class="img-gym-text">124</div>
+                          </div>
+                          <div>
+                            <img src ="/images/icons/path-icon.png"  class="img-path">
+                              <div class="img-path-text">14</div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          <div>
+        </div>
+      </div>
+     </div>
+    </section>
+
+<section id="third" >
+<div class="container">
+    <div class="row">
+        <div class="col s12 l6 m12 wow fadeInLeft" data-wow-duration="1s" >
+           <img src="/images/phone.png" style="max-width:75%;margin-left: 50px;" class="responsive-img">
+        </div>
+        <div class="col s12 l6 m12 wow fadeInRight" style="margin-left: -55px;!important">
+            <h1 class="section-header">FitSquare, the App</h1>
+            <p class="section-description">A sleek, easy to use interface displays all your live data  including your resting, live and peak heart rates, breaths per minute,calories burnt and steps taken. It even measures your Push score- the intensity you put into every excerise.<br><br>
+            Having all this data visible as you exercise allows you to see your progress, respond instantly and get more out of every workout.</p>
+            <div class="send-msg" id="send-msg">
+              <input  maxlength="10" id="phone-number" name="phone-number" class="phone-number" placeholder="Enter mobile no.">
+              <input type="submit" value = "Send Link" class="send-link-btn" id="sendsms" name="sendsms" onclick="sendsms()">
+            </div>
+            <div class="success-msg" id="success-msg" style="display:none;">
+              <h5>Thanks! You will receive the link in a jiffy.</h5>
+            </div>
+            <div class="error-msg" id="error-msg" style="display:none">
+              <h5>Oops! Something went wrong.</h5>
+            </div>
+            <br>
+            <ul style="margin-top:20px;list-style-type:none;" class="wow fadeInUp" data-wow-duration="2s">
+                <li><img src = "/images/stores/google-play.png" class="google-play-icon lazy"/></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+  function sendsms() {
+     var mobno = document.getElementById('phone-number').value;
+     var regmobno = /^[0]?[789]\d{9}$/;
+     if(regmobno.test(mobno)){
+       document.getElementById('send-msg').style.display = "none";
+       document.getElementById('success-msg').style.display = "block";
+       document.getElementById('error-msg').style.display = "none";
+        return;
+    }
+    else{
+        document.getElementById('error-msg').style.display = "block";
+        document.getElementById('phone-number').value = "";
+    }
+  }
+</script>
+</section>
+<section id="fourth" class=" grey-box">
+<div class="container">
+    <div class="row">
+        <div class="col s12 l6 m12">
+            <ul   class="features-tab" style="margin-left:50px;">
+                <li id ="features" class="wow slideInUp  animated"  data-wow-duration="1s" >
+                <div class="features">
+                    <img class="feature-icons lazy" src="/images/img1.png">
+                    <div id="features-description" class="features-description ">
+                        <h5 class="card-title greyish">Custom Workout Plans</h5><p>Our fully customized high-intensity workouts boost your metabolism. Receive workouts adapted to your personal goals</p>
+                    </div>
+                </div>
+                </li>
+                <li id ="features" class="wow slideInUp  animated"  data-wow-duration="1s" >
+                <div class="features">
+                    <img class="feature-icons lazy"src="/images/img2.png">
+                    <div id="features-description" class="features-description ">
+                        <h5 class="card-title greyish">Meal Plans that Work</h5><p>Studies prove that our high protein diet significantly improves energy levels and fat loss.</p>
+                    </div>
+                </div>
+                </li>
+                <li id ="features" class="wow slideInUp  animated"  data-wow-duration="1s" >
+                <div class="features">
+                    <img class="feature-icons lazy"src="/images/img3.png">
+                    <div id="features-description" class="features-description ">
+                        <h5 class="card-title greyish">One on One Coaching</h5><p>We have friendly personal trainers that answer your fitness questions.</p>
+                    </div>
+                </div>
+                </li>
+                <li id ="features" class="wow slideInUp  animated" data-wow-duration="1s" >
+                <div class="features">
+                    <img class="feature-icons lazy"src="/images/img4.png">
+                    <div id="features-description" class="features-description ">
+                        <h5 class="card-title greyish">Track Your Progress</h5><p >Our progress tracking will keep you on the right track and keep you motivated  to keep working out</p>
+                    </div>
+                </div>
+                </li>
+            </ul>
+        </div>
+        <div class="col s12 l6 m12">
+           <img src="/images/phone-second.png" class="responsive-img lazy" style="width:80%;margin-top:43px;">
+           <button href="#downlobuttond" class="download-button purple-2 center-block" style="margin-top:20px;margin-left:137px;">Download</button>
+        </div>
+    </div>
+</div>
+</section>
+</div>
